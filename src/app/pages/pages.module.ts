@@ -23,6 +23,7 @@ import { RegisterpageComponent } from "./examples/registerpage/registerpage.comp
 import { LandingpageComponent } from "./examples/landingpage/landingpage.component";
 import { DefaultHeaderComponent } from './default-header/default-header.component';
 import { DefaultFooterComponent } from './default-footer/default-footer.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   imports: [
@@ -49,7 +50,8 @@ import { DefaultFooterComponent } from './default-footer/default-footer.componen
     RegisterpageComponent,
     LandingpageComponent,
     DefaultHeaderComponent,
-    DefaultFooterComponent
+    DefaultFooterComponent,
+    ContactComponent
   ],
   exports: [
     IndexComponent,
