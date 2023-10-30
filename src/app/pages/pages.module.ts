@@ -21,6 +21,8 @@ import { IndexComponent } from "./index/index.component";
 import { ProfilepageComponent } from "./examples/profilepage/profilepage.component";
 import { RegisterpageComponent } from "./examples/registerpage/registerpage.component";
 import { LandingpageComponent } from "./examples/landingpage/landingpage.component";
+import { DefaultHeaderComponent } from './default-header/default-header.component';
+import { DefaultFooterComponent } from './default-footer/default-footer.component';
 
 @NgModule({
   imports: [
@@ -45,13 +47,17 @@ import { LandingpageComponent } from "./examples/landingpage/landingpage.compone
     IndexComponent,
     ProfilepageComponent,
     RegisterpageComponent,
-    LandingpageComponent
+    LandingpageComponent,
+    DefaultHeaderComponent,
+    DefaultFooterComponent
   ],
   exports: [
     IndexComponent,
     ProfilepageComponent,
     RegisterpageComponent,
-    LandingpageComponent
+    LandingpageComponent,
+    DefaultHeaderComponent,
+    DefaultFooterComponent
   ],
   providers: []
 })

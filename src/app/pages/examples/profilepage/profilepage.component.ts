@@ -6,6 +6,7 @@ import { Component, OnInit, OnDestroy } from "@angular/core";
 })
 export class ProfilepageComponent implements OnInit, OnDestroy {
   isCollapsed = true;
+  habilidades=["Javascript", "Angular", "Java Spring Boot", "MySQL", "Docker", "Git"]
   constructor() {}
 
   ngOnInit() {
