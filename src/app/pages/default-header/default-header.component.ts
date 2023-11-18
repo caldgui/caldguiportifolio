@@ -12,13 +12,16 @@ export class DefaultHeaderComponent {
 
     public goToProfile(){
       this.router.navigate(["./profile"]);
+      window.scrollTo(0, 0)
     }
 
     public goToContact(){
       this.router.navigate(["./contact"]);
+      window.scrollTo(0, 0)
     }
 
     public goToHome(){
       this.router.navigate(["./home"]);
+      window.scrollTo(0, 0)
     }
 }
