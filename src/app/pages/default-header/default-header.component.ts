@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-default-header',
@@ -7,5 +8,17 @@ import { Component} from '@angular/core';
 })
 export class DefaultHeaderComponent {
     isCollapsed = true;
-    constructor() {}
+    constructor(private router: Router) {}
+
+    public goToProfile(){
+      this.router.navigate(["./profile"]);
+    }
+
+    public goToContact(){
+      this.router.navigate(["./contact"]);
+    }
+
+    public goToHome(){
+      this.router.navigate(["./home"]);
+    }
 }

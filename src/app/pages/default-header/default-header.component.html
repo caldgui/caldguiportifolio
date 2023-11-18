@@ -8,9 +8,10 @@
       <a
         class="navbar-brand"
         placement="bottom"
-        [routerLink]="['/home']"
+        (click)="goToHome()"
         target="_blank"
         tooltip="Fullstack developer"
+        style="cursor: pointer; color: #ffff;"
       >
         <span> Guilherme Teixeira Caldana </span> <br> Desenvolvedor Fullstack
       </a>
@@ -56,10 +57,11 @@
         <li class="nav-item p-0">
           <a
             class="nav-link"
-            [routerLink]="['/profile']"
+            (click)="goToProfile()"
             placement="bottom"
             target="_blank"
             tooltip="Quem sou eu?"
+            style="cursor: pointer;"
           >
             <i class="fa fa-user d-lg-none d-xl-none"> </i> Perfil
           </a>
@@ -68,10 +70,11 @@
         <li class="nav-item p-0">
           <a
             class="nav-link"
-            [routerLink]="['/contact']"
+            (click)="goToContact()"
             placement="bottom"
             target="_blank"
             tooltip="Entre em contato comigo"
+            style="cursor: pointer;"
           >
             <i class="fa fa-phone d-lg-none d-xl-none"> </i> Contato
           </a>
