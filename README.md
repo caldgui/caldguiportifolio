@@ -1,3 +1,5 @@
+## Bem-vindo ao meu projeto de portifólio
+
 Este é o repositório do meu portifólio, que estará em constante desenvolvimento. Creio que ele sempre será um projwto a ser melhorado e evoluído, logo, nunca estará definitivamente acabado, mas por um bom motivo. 
 
 Nele, estou usando o template BLK Design System Angular como base e fazendo as páginas por cima como uma forma de estudar um pouco mais do framework e também de HTML, CSS e Typescript.
