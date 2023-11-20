@@ -8,11 +8,7 @@
             <h1 class="display-1">Contato</h1>
           </div>
           <div class="card-body">
-            <form
-              action="mailto:guicaldana7@gmail.com"
-              method="POST"
-              enctype="text/plain"
-            >
+            <form action="https://formspree.io/f/mgejbdlz" method="post">
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
@@ -21,8 +17,8 @@
                       class="form-control"
                       type="text"
                       placeholder="Digite aqui seu nome"
-                      name="nome"
-                      required="true"
+                      name="name"
+                      required
                     />
                   </div>
                 </div>
@@ -49,10 +45,11 @@
                     <input
                       class="form-control"
                       type="text"
+                      inputmode="numeric"
                       placeholder="Digite aqui seu número de telefone"
                       tooltip="(xx)xxxxx-xxxx"
-                      name="telefone"
-                      required="true"
+                      name="phone"
+                      required
                     />
                   </div>
                 </div>
@@ -63,28 +60,20 @@
                     <label> Mensagem </label>
                     <textarea
                       class="form-control"
+                      type="text"
                       placeholder="Digite aqui sua mensagem"
-                      name="mensagem"
-                      required="true"
+                      name="message"
+                      required
                     ></textarea>
                   </div>
                 </div>
               </div>
-              <button
-                class="btn btn-info btn-round float-right"
-                placement="right"
+              <input 
+                class="btn btn-danger btn-round float-right" 
                 type="submit"
-              >
-              <a href="mailto:guicaldana7@gmail.com" style="color: white;">Enviar</a>
-              </button>
-              <button
-                class="btn btn-danger btn-round float-right"
-                placement="right"
-                type="reset"
-              >
-                Limpar
-              </button>
+                >
             </form>
+            
           </div>
         </div>
       </div>
