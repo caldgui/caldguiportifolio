@@ -1,5 +1,53 @@
+@keyframes spin {
+    to{
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(350deg);
+    }
+}
+
+@keyframes background-transform {
+    from{
+        background-color: #e2e2e2;
+    }
+    to{
+        background-color: aquamarine;
+    }
+}
+
+@keyframes concluded-appear {
+    from{
+        display: none;
+    }
+    to{
+        display: flex;
+    }
+}
+
 textarea{
     border: 0.1rem solid #e2e2e22b;
     border-radius: 10px;
 }
 
+.btn-danger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-spinner{
+    width: 24px;
+    height: 24px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    animation: spin 1s linear infinite;
+
+}
+
+.error-feedback{
+    color: red;
+    font-size: 0.8rem;
+    font-weight: 600;
+}

@@ -1,6 +1,6 @@
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -23,9 +23,11 @@ import { IndexComponent } from "./pages/index/index.component";
 import { ProfilepageComponent } from "./pages/examples/profilepage/profilepage.component";
 import { RegisterpageComponent } from "./pages/examples/registerpage/registerpage.component";
 import { LandingpageComponent } from "./pages/examples/landingpage/landingpage.component";
+import { ContactComponent } from "./pages/contact/contact.component";
+import { BrowserModule } from "@angular/platform-browser";
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
     // IndexComponent,
     // ProfilepageComponent,
     // RegisterpageComponent,
@@ -33,7 +35,9 @@ import { LandingpageComponent } from "./pages/examples/landingpage/landingpage.c
   ],
   imports: [
     BrowserAnimationsModule,
+    BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
     AppRoutingModule,
