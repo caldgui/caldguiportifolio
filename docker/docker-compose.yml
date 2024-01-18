@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+
+  frontend:
+    image: port-frontend
+    container_name: port-frontend
+    ports:
+      - 8080:8080
+      - 4200:4200
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ../frontend/:/app/frontend
+    stdin_open: true

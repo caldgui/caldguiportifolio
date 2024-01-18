@@ -1,0 +1,108 @@
+<app-default-header></app-default-header>
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card card-plain">
+          <div class="card-header">
+            <h1 class="display-1">Contato</h1>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="contactForm">
+                <div class="row">
+                  <div class="col-md-12" *ngIf="contactForm.controls['name'] as ctrl">
+                    <div class="form-group">
+                      <label> Seu nome </label>
+                      <input
+                        formControl
+                        class="form-control"
+                        type="text"
+                        placeholder="Digite aqui seu nome"
+                        id="name"
+                        formControlName="name"
+                        required
+                      />
+                      <alert [type]="'danger'" *ngIf="!ctrl.valid">Nome é obrigatório</alert>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12" *ngIf="contactForm.controls['email'] as ctrl">
+                    <div class="form-group">
+                      <label> Endereço de email </label>
+                      <input
+                        formControl
+                        class="form-control"
+                        placeholder="Digite aqui seu email"
+                        type="email"
+                        tooltip="exemplo@email.com"
+                        id="email"
+                        formControlName="email"
+                        required
+                      />
+                      <alert [type]="'danger'" *ngIf="!ctrl.valid">Digite um email válido</alert>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12" *ngIf="contactForm.controls['phone'] as ctrl">
+                    <div class="form-group">
+                      <label> Telefone </label>
+                      <input
+                        formControl
+                        class="form-control"
+                        type="text"
+                        inputmode="numeric"
+                        placeholder="Digite aqui seu número de telefone"
+                        tooltip="(xx)xxxxx-xxxx"
+                        id="phone"
+                        formControlName="phone"
+                        required
+                      />
+                      <alert [type]="'danger'" *ngIf="!ctrl.valid">Digite um número de telefone válido</alert>
+                      <!-- <div class="error-feedback" *ngIf="ctrl.invalid">
+                        Por favor, digite um número de telefone válido.
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12" *ngIf="contactForm.controls['message'] as ctrl">
+                    <div class="form-group">
+                      <label> Mensagem </label>
+                      <textarea
+                        formControl
+                        class="form-control"
+                        type="text"
+                        placeholder="Digite aqui sua mensagem"
+                        id="message"
+                        formControlName="message"
+                        required
+                      ></textarea>
+                      <alert [type]="'danger'" *ngIf="!ctrl.valid">Envie pelo menos uma mensagem</alert>
+                    </div>
+                  </div>
+                </div>
+                <alert [type]="'success'" *ngIf="successContactFlag==true">Mensagem enviada com sucesso! Entrarei em contato assim que possível!</alert>
+                <button 
+                  class="btn btn-success btn-round float-right"
+                  type="submit" 
+                  (click)="onSubmit()"
+                  [disabled]="contactForm.invalid || loadingSpinner==true || failContactFlag==true || successContactFlag==true"
+                  >
+                    <div class="loading-spinner" *ngIf="loadingSpinner==true"></div>
+                    <div *ngIf="sendContactFlag == true">Enviar</div>
+                    <div *ngIf="successContactFlag==true"><i class="tim-icons icon-check-2"></i></div>
+                    <div *ngIf="failContactFlag==true"><i class="tim-icons icon-simple-remove"></i></div>
+                  </button>
+                  <button class="btn btn-danger btn-round float-right" type="reset" (click)="resetForm()">Limpar Formulário</button>
+            </form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-default-footer></app-default-footer>
